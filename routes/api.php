@@ -54,3 +54,11 @@ Route::get('detalles/{detalle}/', 'Api\DetalleController@show');
 Route::post('detalles/', 'Api\DetalleController@store');
 Route::put('detalles/{detalle}/', 'Api\DetalleController@update');
 Route::delete('detalles/{detalle}/', 'Api\DetalleController@destroy');
+
+
+Route::post('auth/register', 'Api\UsuarioController@register');
+Route::post('auth/login', 'Api\UsuarioController@login');
+
+Route::group(['middleware'=>'auth:api'],function(){
+    Route::get('auth/me', 'Api\UsuarioController@me');
+});

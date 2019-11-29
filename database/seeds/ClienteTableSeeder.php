@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\Models\Cliente;
-use Faker\Factory as Faker;
+//use Faker\Factory as Faker;
 
 class ClienteTableSeeder extends Seeder
 {
@@ -22,7 +22,7 @@ class ClienteTableSeeder extends Seeder
             "email"=>'vandro@mail.com',
             "fecha_nacimiento"=>'1987-03-08'
         ]);
-
+/*
         $faker = Faker::create('es_ES');
 
         for($i = 0; $i < 10; $i++) {
@@ -35,5 +35,6 @@ class ClienteTableSeeder extends Seeder
                 "fecha_nacimiento"=>$faker->dateTimeThisCentury->format('Y-m-d')
             ]);
         }
+		*/
     }
 }
